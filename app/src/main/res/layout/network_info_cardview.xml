@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/colorBackgroundTrueColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/nicvLabelInterfaceSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:text="Interface Summary" />
+        <TextView
+            android:id="@+id/nicvDisplayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="@id/nicvLabelInterfaceSummary"
+            app:layout_constraintTop_toBottomOf="@id/nicvLabelInterfaceSummary"
+            tools:text="Display Name" />
+
+        <TextView
+            android:id="@+id/nicvLabelIpAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="IP Address:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/nicvDisplayName"
+            app:layout_constraintTop_toBottomOf="@+id/nicvDisplayName" />
+
+        <TextView
+            android:id="@+id/nicvIPAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="@id/nicvDisplayName"
+            app:layout_constraintTop_toBottomOf="@+id/nicvLabelIpAddress"
+            tools:text="0.0.0.0" />
+
+        <TextView
+            android:id="@+id/nicvLabelIsUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Is Up:"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/nicvDisplayName"
+            app:layout_constraintTop_toBottomOf="@+id/nicvIPAddress" />
+
+        <TextView
+            android:id="@+id/nicvIsUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBaseline_toBaselineOf="@id/nicvLabelIsUp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            tools:layout_editor_absoluteY="73dp"
+            tools:text="true" />
+
+        <TextView
+            android:id="@+id/nicvLabelIsPointToPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="Is Point-To-Point:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/nicvDisplayName"
+            app:layout_constraintTop_toBottomOf="@+id/nicvLabelIsUp" />
+
+        <TextView
+            android:id="@+id/nicvIsPointToPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBaseline_toBaselineOf="@id/nicvLabelIsPointToPoint"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            tools:text="true" />
+
+        <TextView
+            android:id="@+id/nicvLabelIsVirtual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:text="Is Virtual Interface:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/nicvDisplayName"
+            app:layout_constraintTop_toBottomOf="@+id/nicvLabelIsPointToPoint" />
+
+        <TextView
+            android:id="@+id/nicvIsVirtual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBaseline_toBaselineOf="@id/nicvLabelIsVirtual"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="12dp"
+            tools:text="true" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="200dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

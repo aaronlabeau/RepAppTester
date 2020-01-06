@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RefApp Tester</string>
+
+    <string name="endpointSelectorTitle">Endpoint Selector</string>
+    <string name="endpointSelectorDetails">This feature is used to select an endpoint for apps that have multiple environments available for testing</string>
+    <string name="azureTokenGeneratorTitle">Azure Token Generator 6000</string>
+    <string name="azureTokenGeneratorDetails">This feature is used to test getting tokens from Azure AD using the Android ADAL library.  You can setup custom endpoint configuration and tokens generated.  Tokens can be used in other features for testing API calls.</string>
+    <string name="azureTokenCacheTitle">Azure Token Cache</string>
+    <string name="azureTokenCacheDetails">This feature allows you to view and clear the Token Cache inside of the ADAL library and is useful for debugging.  This can be used to simulate logging out of an application.</string>
+    <string name="intuneInformationTitle">InTune Information</string>
+    <string name="intuneInformationDetails">This feature allows you to see information about the InTune enrollment process and to run manual enrollment using the InTune SDK.</string>
+    <string name="intuneFileEncryptionTitle">InTune File Encryption</string>
+    <string name="intuneFileEncryptionDetails">This feature allows you to view what files are in the app container.  Files that are encrypted will be displayed with the logged in users identity.</string>
+    <string name="networkToolsTitle">Network Tools</string>
+    <string name="networkToolsDetails">This feature allows you to run various network tools including: Ping, Traceroute, and NSLookup on a given hostname.</string>
+    <string name="routedetailTitle">Route Details</string>
+    <string name="routedetailDetails">This will display the network route information for a given hostname or IP Address and can be used to figure out which network is being used for a given host</string>
+</resources>

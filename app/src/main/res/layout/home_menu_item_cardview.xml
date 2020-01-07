@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/colorBackgroundTrueColor">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/hmicImageViewHero"
+            android:layout_width="wrap_content"
+            android:layout_height="240dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:contentDescription="Hero Image"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/network_binary_720_480" />
+
+        <TextView
+            android:id="@+id/hmicTextViewTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hmicImageViewHero"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Menu Item Title" />
+
+        <TextView
+            android:id="@+id/hmicTextViewDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="2dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintTop_toBottomOf="@id/hmicTextViewTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Greedo binks r2-d2 solo moff chewbacca palpatine organa yoda. Amidala moff calamari k-3po lando ewok sith wicket solo. Dagobah binks fett owen coruscant kessel mace. Mon darth utapau lars yavin moff tusken raider luke jar. K-3po wookiee darth boba antilles darth fett cade. Biggs mon binks dooku c-3p0 skywalker. Vader sidious obi-wan calrissian luke gonk anakin. Antilles jinn darth jar dagobah anakin ben. Boba kessel binks qui-gon moff mon yavin wampa ventress. Dantooine jinn skywalker kit boba naboo kenobi darth zabrak." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

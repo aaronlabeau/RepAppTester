@@ -1,19 +1,18 @@
 package com.refapp.tester.services
 
-import android.content.res.Resources
+import android.content.Context
 import com.refapp.tester.R
 import com.refapp.tester.models.ListMenuItem
 import com.refapp.tester.models.MenuType
 
 
-class MenuFactory {
+class MenuFactory (val context: Context) {
     fun getMenuItems() : List<ListMenuItem>{
         val list = ArrayList<ListMenuItem>()
-        val system = Resources.getSystem()
 
         list.add(ListMenuItem(
-            system.getString(R.string.azureTokenGeneratorTitle),
-            system.getString(R.string.azureTokenGeneratorDetails),
+            context.resources.getString(R.string.azureTokenGeneratorTitle),
+            context.resources.getString(R.string.azureTokenGeneratorDetails),
             0,
             true,
             MenuType.TokenGenerator,
@@ -21,8 +20,8 @@ class MenuFactory {
         )
 
         list.add(ListMenuItem(
-            system.getString(R.string.azureTokenCacheTitle),
-            system.getString(R.string.azureTokenCacheDetails),
+            context.resources.getString(R.string.azureTokenCacheTitle),
+            context.resources.getString(R.string.azureTokenCacheDetails),
             1,
             true,
             MenuType.TokenCache,
@@ -30,8 +29,8 @@ class MenuFactory {
         )
 
         list.add(ListMenuItem(
-            system.getString(R.string.routedetailTitle),
-            system.getString(R.string.routedetailDetails),
+            context.resources.getString(R.string.routedetailTitle),
+            context.resources.getString(R.string.routedetailDetails),
             2,
             true,
             MenuType.RouteDetails,
@@ -39,8 +38,8 @@ class MenuFactory {
         )
 
         list.add(ListMenuItem(
-            system.getString(R.string.networkToolsTitle),
-            system.getString(R.string.networkToolsDetails),
+            context.resources.getString(R.string.networkToolsTitle),
+            context.resources.getString(R.string.networkToolsDetails),
             3,
             true,
             MenuType.NetworkTools,
@@ -48,8 +47,8 @@ class MenuFactory {
         )
 
         list.add(ListMenuItem(
-            system.getString(R.string.endpointSelectorTitle),
-            system.getString(R.string.endpointSelectorDetails),
+            context.resources.getString(R.string.endpointSelectorTitle),
+            context.resources.getString(R.string.endpointSelectorDetails),
             6,
             true,
             MenuType.EndpointSelector,

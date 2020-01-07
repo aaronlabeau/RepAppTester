@@ -1,25 +1,53 @@
 package com.refapp.tester.views
 
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.refapp.tester.R
+import com.refapp.tester.models.MenuType
+import com.refapp.tester.services.MenuFactory
+import com.refapp.tester.views.adapters.RvAdapterHomeList
 
-/**
- * A simple [Fragment] subclass.
- */
 class HomeFragment : Fragment() {
+    private var factory : MenuFactory? = null
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        factory = MenuFactory(context)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
-    }
+        val view : View = inflater.inflate(R.layout.fragment_home, container, false)
+        val activity = activity as Context
+        val rv = view.findViewById<RecyclerView>(R.id.homeRecycleView)
+        rv.layoutManager = LinearLayoutManager(activity)
+        val f = factory as MenuFactory
+        val adapter = RvAdapterHomeList(f.getMenuItems())
 
+        //handle on click of a row/cell in the RecyclerView
+        adapter.onItemClick = { item ->
+            when (item.menuType)     {
+                MenuType.RouteDetails -> {
+
+                }
+                else -> {
+                   Log.d("HomeFragment", "Item selected not implemented")
+                }
+            }
+        }
+
+        rv.adapter = adapter
+
+        return view
+    }
 
 }

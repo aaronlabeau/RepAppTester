@@ -12,9 +12,6 @@ import com.refapp.tester.R
 import com.refapp.tester.services.NetworkInformationFactory
 import com.refapp.tester.views.adapters.RvAdapterNetworkInfoList
 
-/**
- * A simple [Fragment] subclass.
- */
 class NetworkFragment : Fragment() {
     private var factory : NetworkInformationFactory? = null
 

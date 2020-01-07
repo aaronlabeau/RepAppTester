@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.refapp.tester.R
@@ -35,9 +37,10 @@ class HomeFragment : Fragment() {
 
         //handle on click of a row/cell in the RecyclerView
         adapter.onItemClick = { item ->
+            val controller = this.findNavController()
             when (item.menuType)     {
                 MenuType.RouteDetails -> {
-
+                    controller.navigate(R.id.action_homeFragment_to_RouteDetailsFragment)
                 }
                 else -> {
                    Log.d("HomeFragment", "Item selected not implemented")

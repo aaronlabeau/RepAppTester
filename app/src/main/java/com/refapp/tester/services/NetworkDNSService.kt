@@ -7,14 +7,28 @@ import android.net.ConnectivityManager
 import android.net.LinkProperties
 import android.os.Build
 import android.util.Log
+import com.refapp.tester.models.StringResult
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.io.LineNumberReader
 import java.net.InetAddress
 
-class NetworkDNSConfigFinderService(val context:Context) {
+class NetworkDNSService(val context:Context) {
     private val TAG = "DnsServersDetector"
     private val METHOD_EXEC_PROP_DELIM = "]: ["
+
+    fun getNslookupResult(hostname: String) : StringResult {
+        val strResult :StringResult
+        strResult = try {
+            val result = InetAddress.getAllByName(hostname)
+            StringResult(result[0].hostAddress, false, "")
+        } catch (e: Exception) {
+            val message =" $hostname locked up lookup with error ${e.message}"
+            Log.d("NetworkDNSService", message )
+            StringResult("", true, message)
+        }
+        return strResult
+    }
 
     /**
      * Returns android DNS servers used for current connected network

@@ -3,12 +3,16 @@ package com.refapp.tester.services
 import android.content.Context
 
 class NetworkRouteFinderService(var context: Context) {
+
+    fun getNetworkRouteInfo(search: String): Array<String>{
+       return getNetworkCommandResults("ip route get $search")
+    }
     fun getNetworkRoutes(): Array<String> {
         return getNetworkCommandResults("ip route show")
     }
 
     fun getNetworkRouteDetails() : Array<String> {
-        return getNetworkCommandResults("ip addr show")
+        return getNetworkCommandResults("ip -o a")
     }
     private fun getNetworkCommandResults(command: String) : Array<String>{
         val shellCommandService = ShellCommandService()

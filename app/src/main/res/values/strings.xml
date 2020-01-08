@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RefApp Tester</string>
+    <string name="app_name">EY App Tester</string>
     <string name="endpointSelectorTitle">Endpoint Selector</string>
     <string name="endpointSelectorDetails">This feature is used to select an endpoint for apps that have multiple environments available for testing</string>
     <string name="azureTokenGeneratorTitle">Azure Token Generator 6000</string>
@@ -15,4 +15,5 @@
     <string name="networkToolsDetails">This feature allows you to run various network tools including: Ping, Traceroute, and NSLookup on a given hostname.</string>
     <string name="routedetailTitle">Route Details</string>
     <string name="routedetailDetails">This will display the network route information for a given hostname or IP Address and can be used to figure out which network is being used for a given host</string>
+    <string name="networkError">Cold not complete request</string>
 </resources>

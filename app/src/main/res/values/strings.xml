@@ -16,4 +16,10 @@
     <string name="routedetailTitle">Route Details</string>
     <string name="routedetailDetails">This will display the network route information for a given hostname or IP Address and can be used to figure out which network is being used for a given host</string>
     <string name="networkError">Cold not complete request</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nslookup">nslookup</string>
+    <string name="ping">ping</string>
+    <string name="traceroute">traceroute</string>
 </resources>

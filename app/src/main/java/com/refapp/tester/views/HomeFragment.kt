@@ -42,6 +42,9 @@ class HomeFragment : Fragment() {
                 MenuType.RouteDetails -> {
                     controller.navigate(R.id.action_homeFragment_to_RouteDetailsFragment)
                 }
+                MenuType.NetworkTools -> {
+                    controller.navigate(R.id.action_homeFragment_to_NetworkToolsFragment)
+                }
                 else -> {
                    Log.d("HomeFragment", "Item selected not implemented")
                 }

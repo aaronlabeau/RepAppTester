@@ -1,12 +1,8 @@
 package com.refapp.tester.services
 
 import android.content.Context
-import androidx.annotation.StringRes
-import androidx.annotation.UiThread
 import com.refapp.tester.models.NetworkInformation
 import com.refapp.tester.models.StringResult
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 
 class NetworkInformationFactory(var context: Context) {
     private val ipRegEx: String =
@@ -14,10 +10,18 @@ class NetworkInformationFactory(var context: Context) {
     private val regEx: Regex = Regex(ipRegEx)
 
     private val dnsConfig = NetworkDNSService(context)
-    private val routeConfig = NetworkRouteFinderService(context)
+    private val networkToolsService = NetworkToolsService(context)
 
     fun getNslookupResult(hostname: String): StringResult {
         return dnsConfig.getNslookupResult(hostname)
+    }
+
+    fun getNetworkPingResult(hostname: String) : StringResult {
+        return networkToolsService.getNetworkPing(hostname)
+    }
+
+    fun getNetworkTracerouteResult(hostname: String):StringResult {
+        return networkToolsService.getNetworkTraceroute(hostname)
     }
 
     fun getNetworkRouteInfo(hostname: String): StringResult {
@@ -39,7 +43,7 @@ class NetworkInformationFactory(var context: Context) {
             }
         }
         strResult = if (!isError) {
-            val results = routeConfig.getNetworkRouteInfo(search)
+            val results = networkToolsService.getNetworkRouteInfo(search)
             sb.append("Results for accessing resource $search are below:\n\n")
             for (s in results) {
                 sb.append(s)
@@ -62,11 +66,11 @@ class NetworkInformationFactory(var context: Context) {
             sbDNSServers.append("$s\n")
 
         val sbRoutes = StringBuilder()
-        for (s in routeConfig.getNetworkRoutes())
+        for (s in networkToolsService.getNetworkRoutes())
             sbRoutes.append("$s\n")
 
         val sbRouteDetails = StringBuilder()
-        for (s in routeConfig.getNetworkRouteDetails())
+        for (s in networkToolsService.getNetworkRouteDetails())
             sbRouteDetails.append("$s\n")
 
         return NetworkInformation(

@@ -7,15 +7,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import com.refapp.tester.R
 import com.refapp.tester.models.StringResult
 import com.refapp.tester.services.NetworkInformationFactory
 import kotlinx.android.synthetic.main.fragment_route_details.*
 
-class RouteDetailsFragment() : Fragment(), IRouteDetailTaskListener  {
+class RouteDetailsFragment() : Fragment(), IStringResultTaskListener  {
     private lateinit var taskWorker : RouteDetailTask
+    override lateinit var progressBar: ProgressBar
     override lateinit var currentContext :Context
+
     override fun onAttach(context: Context){
         super.onAttach(context)
         currentContext = context
@@ -47,12 +50,7 @@ class RouteDetailsFragment() : Fragment(), IRouteDetailTaskListener  {
     }
 }
 
-interface IRouteDetailTaskListener {
-    var currentContext: Context
-    fun onTaskCompleted(result: StringResult)
-}
-
-class RouteDetailTask(private var taskListener: IRouteDetailTaskListener) : AsyncTask<String, StringResult, StringResult>() {
+class RouteDetailTask(private var taskListener: IStringResultTaskListener) : AsyncTask<String, StringResult, StringResult>() {
     private lateinit var factory: NetworkInformationFactory
 
     override fun onPreExecute() {

@@ -17,6 +17,11 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popUpTo="@+id/homeFragment"
             app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_homeFragment_to_NetworkToolsFragment"
+            app:destination="@id/NetworkToolsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/networkFragment"
@@ -30,8 +35,13 @@
         tools:layout="@layout/fragment_setting" />
 
     <fragment
-        android:id="@+id/RouteDetailsFragment"
-        android:name="com.refapp.tester.views.RouteDetailsFragment"
-        android:label="Route Details"
-        tools:layout="@layout/fragment_route_details" />
+    android:id="@+id/RouteDetailsFragment"
+    android:name="com.refapp.tester.views.RouteDetailsFragment"
+    android:label="Route Details"
+    tools:layout="@layout/fragment_route_details" />
+    <fragment
+        android:id="@+id/NetworkToolsFragment"
+        android:name="com.refapp.tester.views.NetworkToolsFragment"
+        android:label="Network Tools"
+        tools:layout="@layout/fragment_network_tools" />
 </navigation>

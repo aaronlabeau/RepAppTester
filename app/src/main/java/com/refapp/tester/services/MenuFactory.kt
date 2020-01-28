@@ -1,7 +1,7 @@
 package com.refapp.tester.services
 
 import android.content.Context
-import com.refapp.tester.R
+import com.eygsl.ctmob.speedup.R
 import com.refapp.tester.models.ListMenuItem
 import com.refapp.tester.models.MenuType
 

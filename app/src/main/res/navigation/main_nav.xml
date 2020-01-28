@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.refapp.tester.views.SettingFragment"
-        android:label="Setting"
+        android:label="Device Info"
         tools:layout="@layout/fragment_setting" />
 
     <fragment

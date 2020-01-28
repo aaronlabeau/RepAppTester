@@ -12,7 +12,7 @@
     </item>
     <item
         android:id="@+id/settingsFragment"
-        android:title="Settings"
+        android:title="Device Info"
         android:icon="@drawable/ic_settings_applications_white_24dp" >
     </item>
 </menu>

@@ -12,7 +12,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.refapp.tester.R
+import com.eygsl.ctmob.speedup.R
 import com.refapp.tester.models.MenuType
 import com.refapp.tester.services.MenuFactory
 import com.refapp.tester.views.adapters.RvAdapterHomeList

@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.refapp.tester.R
+import com.eygsl.ctmob.speedup.R
 import com.refapp.tester.models.NetworkInformation
 
 class RvAdapterNetworkInfoList(private val item: NetworkInformation) :

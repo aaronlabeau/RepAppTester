@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.eygsl.ctmob.speedup.R
 import com.refapp.tester.models.ListMenuItem
-import com.refapp.tester.R
 import com.refapp.tester.models.MenuType
 
 class RvAdapterHomeList(private val items: List<ListMenuItem>) :

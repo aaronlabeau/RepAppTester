@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.refapp.tester.R
+import com.eygsl.ctmob.speedup.R
 import com.refapp.tester.services.NetworkInformationFactory
 import com.refapp.tester.views.adapters.RvAdapterNetworkInfoList
 

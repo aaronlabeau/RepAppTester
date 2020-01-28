@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
-import com.refapp.tester.R
+import com.eygsl.ctmob.speedup.R
 import com.refapp.tester.models.StringResult
 import com.refapp.tester.services.NetworkInformationFactory
 import kotlinx.android.synthetic.main.fragment_route_details.*

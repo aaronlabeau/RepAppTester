@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ProgressBar
-import com.refapp.tester.R
+import com.eygsl.ctmob.speedup.R
 import com.refapp.tester.models.NetworkToolsOption
 import com.refapp.tester.models.StringResult
 import com.refapp.tester.services.NetworkInformationFactory
@@ -38,7 +38,6 @@ class NetworkToolsFragment : Fragment(), IStringResultTaskListener {
         btnSearch.setOnClickListener {
             val selectedOption = when (ntfRadioGroup.checkedRadioButtonId) {
                 R.id.ntfRadioButtonPing -> NetworkToolsOption.Ping
-                R.id.ntfRadioButtonTraceroute -> NetworkToolsOption.Traceroute
                 else -> NetworkToolsOption.Nslookup
             }
             taskWorker = NetworkToolsTask(this, selectedOption)
